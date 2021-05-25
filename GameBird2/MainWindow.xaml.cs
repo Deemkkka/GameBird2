@@ -148,7 +148,7 @@ namespace GameBird2
         {
             playTimer.Stop();
             gameOver = true;
-            txtScore.Content += "    Game Over, R - restart";
+            txtScore.Content += "  Game Over, R - restart";
         }
     }
 }
