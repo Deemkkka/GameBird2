@@ -1,0 +1,48 @@
+﻿<Window x:Class="GameBird2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameBird2"
+        mc:Ignorable="d"
+        Title="Лети птичка" Height="490" Width="525">
+    <!-- 
+            Событие KeyDown: это событие возникает, как только пользователь нажимает клавишу на клавиатуре, оно повторяется, пока пользователь удерживает клавишу нажатой.
+            Событие KeyUp: это событие возникает после того, как пользователь отпускает клавишу на клавиатуре. 
+    -->
+
+    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="LightBlue">
+
+        <Image Width="200" Height="150" Source="/images/clouds.png" Canvas.Left="100" Canvas.Top="90" Tag="cloud"/>
+        <Image Width="200" Height="150" Source="/images/clouds2.png" Canvas.Left="300" Canvas.Top="90" Tag="cloud"/>
+
+        <Image Width="70" Height="400" Source="/images/pipeTop.png" Canvas.Left="97" Canvas.Top="-253" Tag="truba1" />
+        <Image Width="70" Height="400" Source="/images/pipeBottom.png" Canvas.Left="97" Canvas.Top="272" Tag="truba1" />
+
+        <Image Width="70" Height="400" Source="/images/pipeTop.png" Canvas.Left="260" Canvas.Top="-180" Tag="truba2" />
+        <Image Width="70" Height="400" Source="/images/pipeBottom.png" Canvas.Left="260" Canvas.Top="326" Tag="truba2" />
+
+        <Image Width="70" Height="400" Source="/images/pipeTop.png" Canvas.Left="433" Canvas.Top="-270" Tag="truba3" />
+        <Image Width="70" Height="400" Source="/images/pipeBottom.png" Canvas.Left="433" Canvas.Top="237" Tag="truba3" />
+
+        <!--
+                Stretch="Fill" - растягивает изображение, чтобы оно соответствовало высоте и ширине.
+        -->
+
+        <Image Name="Bird" 
+               Width="50" 
+               Height="40" 
+               Source="/images/Bird.png" 
+               Stretch="Fill"
+               Canvas.Left="45" 
+               Canvas.Top="200"/>
+
+        <Label Name="txtScore" 
+               Content="Score: 0" 
+               FontSize="22" 
+               FontWeight="UltraBlack"
+               Canvas.Left="0"
+               Canvas.Top="0"/>
+
+    </Canvas>
+</Window>
